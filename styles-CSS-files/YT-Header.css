@@ -1,0 +1,182 @@
+
+.header{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0;
+
+    border-bottom: 1px solid rgb(228 228 228);
+
+    z-index: 100;
+}
+
+
+/* Left Section: Start */
+.left-sec{
+
+    display: flex;
+    align-items: center;
+    
+}
+.hamburger-menu-icon{
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 20px;
+}
+.youtube-logo{
+    height: 20px;
+    
+}
+/* Left Section: End */
+
+
+/* Middle Section: Start */
+.middle-sec{
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar{
+    flex: 1;
+    height: 34px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.05);
+    width: 0;
+
+}
+.search-bar::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    
+}
+.search-btn{
+    height: 37px;
+    width: 62px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(192, 192, 192);
+    /* border-left: none;  OR as like below*/
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+.search-btn,
+.voice-search-btn,
+.upload-video-container,
+.youtube-apps-container,
+.notifications-icon-container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* Making it a flex for the tooltips to align center ww.r.t its buttons */
+    align-items: center;
+}
+
+/* Code for tooptips that appears benith the icons */
+.search-btn .tooltip,
+.voice-search-btn .tooltip,
+.upload-video-container .tooltip,
+.youtube-apps-container .tooltip,
+.notifications-icon-container .tooltip{
+    position: absolute;
+    bottom: -30px;
+    background-color: gray;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 2px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    /* Because our tooltip is inside the btn - when hovered on the search text, 
+       it is considered hovering on the btn and the text appears so, to counter this use ==> pointer events: none */
+    pointer-events: none;
+    white-space: nowrap;
+    /* White space no wrap means ==> texts will not appear on the white space */
+
+}
+
+.search-btn:hover .tooltip,
+.voice-search-btn:hover .tooltip,
+.upload-video-container:hover .tooltip,
+.youtube-apps-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip{
+    opacity: 1;
+}
+.search-icon{
+    height: 25px;
+}
+.voice-search-btn{
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color:rgb(248, 248, 248);
+    border-radius: 50%;
+    
+}
+.voice-search-icon{
+    height: 25px;
+}
+/* Middle Section: End */
+
+
+
+/* Right Section: Start */
+.right-sec{
+    margin-right: 20px;
+    display: flex;
+    width: 170px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;   /* This means no matter the size of window - it will not shirnk as other flex things do */
+}
+
+.upload-video-icon{
+    height: 21px;
+    cursor: pointer;
+}
+
+.youtube-apps-icon{
+    height: 21px;
+    cursor: pointer;
+}
+
+.notifications-icon{
+    height: 21px;
+    cursor: pointer;
+}
+.notifications-icon-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.notifications-count{
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    background-color: rgb(236, 0, 0);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+.user-profile-pic{
+    height: 28px;
+    border-radius: 50%;
+}
+/* Right Section: Start */
+
+
+
