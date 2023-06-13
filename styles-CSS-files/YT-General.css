@@ -12,6 +12,5 @@ body{
 }
 a{
     text-decoration: none !important;
-    color: inherit;
-    cursor: auto;
+    color: black !important;
 }
