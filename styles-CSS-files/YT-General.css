@@ -10,8 +10,8 @@ body{
     padding-top: 50px;
     padding-left: 70px;
 }
-a.nostyle{
-    text-decoration: inherit;
+a{
+    text-decoration: none !important;
     color: inherit;
     cursor: auto;
 }
